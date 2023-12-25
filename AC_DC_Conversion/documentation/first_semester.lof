@@ -1,0 +1,35 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Half-Wave Rectification Process\relax }}{13}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Full-Wave Rectification Process\relax }}{14}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Three-Phase Passive Rectifier\relax }}{15}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Three-Phase Vienna Rectifier\relax }}{16}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Three-Phase Two-Level Six-Switch Boost-Type Rectifier\relax }}{17}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Three-Phase Three-Level Neutral Point Clamped Converter\relax }}{17}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Three-Phase Three-Level T-Type Converter\relax }}{18}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces The Effect of P-Gain on a System\relax }}{20}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces PI-Control Process\relax }}{20}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces PID Control on a System\relax }}{21}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces PID Control Process\relax }}{22}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Control Circuit of AFE with 800V Output Voltage\relax }}{22}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces PI Control Loop of AFE\relax }}{23}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces PLL Control\relax }}{25}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces \(\alpha - \beta \) Signals to d-q Signals\relax }}{25}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {With q-Component}}}{25}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Without q-Component}}}{25}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces ABC Frame\relax }}{26}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Clarke Transform\relax }}{26}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Park Transform\relax }}{27}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Three-phase Inverter with Passive Filter\relax }}{29}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces The Output Voltage on The DC-Link on Simulink -- Method I\relax }}{31}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces The Current and The Phase Voltage of Phase R -- Method I\relax }}{32}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces The Output Voltage on The DC-Link on Simulink -- Method II\relax }}{34}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces The Current and The Phase Voltage of Phase R -- Method II\relax }}{35}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces The Output Voltage on The DC-Link on Simulink -- Method III\relax }}{37}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces The Current and The Phase Voltage of Phase R -- Method III\relax }}{38}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces The Output Voltage on The DC-Link on Simulink -- Method IV\relax }}{40}%
+\contentsline {figure}{\numberline {4.20}{\ignorespaces The Current and The Phase Voltage of Phase R -- Method IV\relax }}{40}%
+\contentsline {figure}{\numberline {4.21}{\ignorespaces The Output Voltage on The DC-Link on Simulink -- Method V\relax }}{42}%
+\contentsline {figure}{\numberline {4.22}{\ignorespaces The Current and The Phase Voltage of Phase R -- Method V\relax }}{43}%
