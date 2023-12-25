@@ -1,0 +1,872 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.12.24)  26 DEC 2023 01:08
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/first_semester.tex
+(/home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/first_semester.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk12.clo
+File: bk12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@chapter=\count168
+\c@section=\count169
+\c@subsection=\count170
+\c@subsubsection=\count171
+\c@paragraph=\count172
+\c@subparagraph=\count173
+\c@figure=\count174
+\c@table=\count175
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+))
+\Gm@cnth=\count176
+\Gm@cntv=\count177
+\c@Gm@tempcnt=\count178
+\Gm@bindingoffset=\dimen135
+\Gm@wd@mp=\dimen136
+\Gm@odd@mp=\dimen137
+\Gm@even@mp=\dimen138
+\Gm@layoutwidth=\dimen139
+\Gm@layoutheight=\dimen140
+\Gm@layouthoffset=\dimen141
+\Gm@layoutvoffset=\dimen142
+\Gm@dimlist=\toks15
+) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+) (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip49
+\bibsep=\skip50
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count179
+) (/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen143
+\captionmargin@=\dimen144
+\captionwidth=\dimen145
+\caption@tempdima=\dimen146
+\caption@indent=\dimen147
+\caption@parindent=\dimen148
+\caption@hangindent=\dimen149
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count180
+\c@continuedfloat=\count181
+)
+\c@KVtest=\count182
+\sf@farskip=\skip51
+\sf@captopadj=\dimen150
+\sf@capskip=\skip52
+\sf@nearskip=\skip53
+\c@subfigure=\count183
+\c@subfigure@save=\count184
+\c@lofdepth=\count185
+\c@subtable=\count186
+\c@subtable@save=\count187
+\c@lotdepth=\count188
+\sf@top=\skip54
+\sf@bottom=\skip55
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip56
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen151
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen152
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count189
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count190
+\leftroot@=\count191
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count192
+\DOTSCASE@=\count193
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box45
+\strutbox@=\box46
+\big@size=\dimen153
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count194
+\c@MaxMatrixCols=\count195
+\dotsspace@=\muskip16
+\c@parentequation=\count196
+\dspbrk@lvl=\count197
+\tag@help=\toks17
+\row@=\count198
+\column@=\count199
+\maxfields@=\count266
+\andhelp@=\toks18
+\eqnshift@=\dimen154
+\alignsep@=\dimen155
+\tagshift@=\dimen156
+\tagwidth@=\dimen157
+\totwidth@=\dimen158
+\lineht@=\dimen159
+\@envbody=\toks19
+\multlinegap=\skip57
+\multlinetaggap=\skip58
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count267
+\lst@gtempboxa=\box47
+\lst@token=\toks21
+\lst@length=\count268
+\lst@currlwidth=\dimen160
+\lst@column=\count269
+\lst@pos=\count270
+\lst@lostspace=\dimen161
+\lst@width=\dimen162
+\lst@newlines=\count271
+\lst@lineno=\count272
+\lst@maxwidth=\dimen163
+ (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
+\c@lstnumber=\count273
+\lst@skipnumbers=\count274
+\lst@framebox=\box48
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2019/09/10 1.8c listings configuration
+))
+Package: listings 2019/09/10 1.8c (Carsten Heinz)
+ (/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip59
+\LTright=\skip60
+\LTpre=\skip61
+\LTpost=\skip62
+\LTchunksize=\count275
+\LTcapwidth=\dimen164
+\LT@head=\box49
+\LT@firsthead=\box50
+\LT@foot=\box51
+\LT@lastfoot=\box52
+\LT@cols=\count276
+\LT@rows=\count277
+\c@LT@tables=\count278
+\c@LT@chunks=\count279
+\LT@p@ftn=\toks22
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen165
+\ar@mcellbox=\box53
+\extrarowheight=\dimen166
+\NC@list=\toks23
+\extratabsurround=\skip63
+\backup@length=\skip64
+\ar@cellbox=\box54
+) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen167
+\lightrulewidth=\dimen168
+\cmidrulewidth=\dimen169
+\belowrulesep=\dimen170
+\belowbottomsep=\dimen171
+\aboverulesep=\dimen172
+\abovetopsep=\dimen173
+\cmidrulesep=\dimen174
+\cmidrulekern=\dimen175
+\defaultaddspace=\dimen176
+\@cmidla=\count280
+\@cmidlb=\count281
+\@aboverulesep=\dimen177
+\@belowrulesep=\dimen178
+\@thisruleclass=\count282
+\@lastruleclass=\count283
+\@thisrulewidth=\dimen179
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen180
+\Gin@req@width=\dimen181
+) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count284
+\l__pdf_internal_box=\box55
+) (/home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/first_semester.aux)
+\openout1 = `first_semester.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 18.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=483.69687pt
+* \textheight=702.78308pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-33.0119pt
+* \headheight=12.0pt
+* \headsep=19.8738pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=88.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2018/08/26 v1.4a longtable captions (AR)
+)
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count285
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count286
+\scratchdimen=\dimen182
+\scratchbox=\box56
+\nofMPsegments=\count287
+\nofMParguments=\count288
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count289
+\MPscratchDim=\dimen183
+\MPnumerator=\count290
+\makeMPintoPDFobject=\count291
+\everyMPtoPDFconversion=\toks25
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+
+LaTeX Warning: No \author given.
+
+[1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
+
+]
+No file first_semester.toc.
+\tf@toc=\write3
+\openout3 = `first_semester.toc'.
+
+[3] [4
+
+]
+No file first_semester.lof.
+\tf@lof=\write4
+\openout4 = `first_semester.lof'.
+
+[5] [6
+
+]
+No file first_semester.lot.
+\tf@lot=\write5
+\openout5 = `first_semester.lot'.
+
+[7] [8
+
+] [9] [10]
+Chapter 1.
+
+Package natbib Warning: Citation `acdc2018' on page 11 undefined on input line 35.
+
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 37.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11
+
+] [12]
+Chapter 2.
+
+LaTeX Warning: Reference `fig:image1' on page 13 undefined on input line 55.
+
+<media/image1.png, id=43, 526.96875pt x 150.5625pt>
+File: media/image1.png Graphic file (type png)
+<use media/image1.png>
+Package pdftex.def Info: media/image1.png  used on input line 59.
+(pdftex.def)             Requested size: 369.88582pt x 105.68709pt.
+[13
+
+ </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image1.png>]
+<media/image2.png, id=50, 526.96875pt x 173.14688pt>
+File: media/image2.png Graphic file (type png)
+<use media/image2.png>
+Package pdftex.def Info: media/image2.png  used on input line 73.
+(pdftex.def)             Requested size: 369.88582pt x 121.54016pt.
+
+
+LaTeX Warning: Reference `fig:image2' on page 14 undefined on input line 78.
+
+
+Package natbib Warning: Citation `rectifier2023' on page 14 undefined on input line 78.
+
+[14 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image2.png>]
+Chapter 3.
+
+LaTeX Warning: Reference `fig:image3' on page 15 undefined on input line 90.
+
+<media/image3.png, id=55, 471.26062pt x 233.37187pt>
+File: media/image3.png Graphic file (type png)
+<use media/image3.png>
+Package pdftex.def Info: media/image3.png  used on input line 94.
+(pdftex.def)             Requested size: 284.52756pt x 140.90019pt.
+[15
+
+ </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image3.png>]
+
+LaTeX Warning: Reference `fig:image4' on page 16 undefined on input line 106.
+
+<media/image4.png, id=60, 597.73312pt x 249.93375pt>
+File: media/image4.png Graphic file (type png)
+<use media/image4.png>
+Package pdftex.def Info: media/image4.png  used on input line 110.
+(pdftex.def)             Requested size: 284.52756pt x 118.97147pt.
+
+LaTeX Warning: Reference `fig:image5' on page 16 undefined on input line 120.
+
+<media/image5.png, id=61, 323.70938pt x 156.585pt>
+File: media/image5.png Graphic file (type png)
+<use media/image5.png>
+Package pdftex.def Info: media/image5.png  used on input line 124.
+(pdftex.def)             Requested size: 284.52756pt x 137.63991pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `fig:image6' on page 16 undefined on input line 136.
+
+[16 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image4.png>]
+<media/image6.png, id=66, 375.65344pt x 207.77625pt>
+File: media/image6.png Graphic file (type png)
+<use media/image6.png>
+Package pdftex.def Info: media/image6.png  used on input line 140.
+(pdftex.def)             Requested size: 284.52756pt x 157.38528pt.
+
+
+LaTeX Warning: Reference `fig:image7' on page 17 undefined on input line 152.
+
+<media/image7.png, id=67, 464.4853pt x 197.23688pt>
+File: media/image7.png Graphic file (type png)
+<use media/image7.png>
+Package pdftex.def Info: media/image7.png  used on input line 155.
+(pdftex.def)             Requested size: 284.52756pt x 120.82292pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image5.png> </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image6.png>] [18 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image7.png>]
+Chapter 4.
+
+Overfull \hbox (17.33508pt too wide) in paragraph at lines 169--171
+\OT1/ptm/m/n/12 tion, DC-link con-fig-u-ra-tion, phase-locked loop (PLL), Clarke and Park trans-for-ma-tions, and Proportional-
+ []
+
+<media/image8.png, id=77, 565.36218pt x 226.59656pt>
+File: media/image8.png Graphic file (type png)
+<use media/image8.png>
+Package pdftex.def Info: media/image8.png  used on input line 185.
+(pdftex.def)             Requested size: 426.79134pt x 171.06033pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19
+
+]
+<media/image9.png, id=82, 275.52937pt x 103.88812pt>
+File: media/image9.png Graphic file (type png)
+<use media/image9.png>
+Package pdftex.def Info: media/image9.png  used on input line 204.
+(pdftex.def)             Requested size: 284.52756pt x 107.29129pt.
+ [20 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image8.png> </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image9.png>]
+<media/image10.png, id=93, 515.9275pt x 378.41376pt>
+File: media/image10.png Graphic file (type png)
+<use media/image10.png>
+Package pdftex.def Info: media/image10.png  used on input line 222.
+(pdftex.def)             Requested size: 398.33858pt x 292.17632pt.
+
+
+LaTeX Warning: Reference `fig:image10' on page 21 undefined on input line 227.
+
+<media/image11.png, id=94, 338.0265pt x 198.7425pt>
+File: media/image11.png Graphic file (type png)
+<use media/image11.png>
+Package pdftex.def Info: media/image11.png  used on input line 237.
+(pdftex.def)             Requested size: 341.43306pt x 200.75865pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 7099) has occurred while \output is active []
+
+ [21 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image10.png>]
+<media/image12.png, id=99, 763.35187pt x 320.69812pt>
+File: media/image12.png Graphic file (type png)
+<use media/image12.png>
+Package pdftex.def Info: media/image12.png  used on input line 256.
+(pdftex.def)             Requested size: 426.79134pt x 179.301pt.
+
+
+Package natbib Warning: Citation `pid2015' on page 22 undefined on input line 261.
+
+[22 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image11.png> </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image12.png>]
+<media/image13.png, id=105, 373.395pt x 310.91156pt>
+File: media/image13.png Graphic file (type png)
+<use media/image13.png>
+Package pdftex.def Info: media/image13.png  used on input line 266.
+(pdftex.def)             Requested size: 426.79134pt x 355.38692pt.
+ [23 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image13.png>]
+<media/image0.png, id=114, 519.44063pt x 106.14656pt>
+File: media/image0.png Graphic file (type png)
+<use media/image0.png>
+Package pdftex.def Info: media/image0.png  used on input line 315.
+(pdftex.def)             Requested size: 369.88582pt x 75.58485pt.
+<media/image14.png, id=115, 469.755pt x 134.30174pt>
+File: media/image14.png Graphic file (type png)
+<use media/image14.png>
+Package pdftex.def Info: media/image14.png  used on input line 334.
+(pdftex.def)             Requested size: 369.88582pt x 105.74883pt.
+ [24 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image0.png>]
+<media/image15_a.png, id=120, 206.955pt x 148.8105pt>
+File: media/image15_a.png Graphic file (type png)
+<use media/image15_a.png>
+Package pdftex.def Info: media/image15_a.png  used on input line 344.
+(pdftex.def)             Requested size: 241.84843pt x 173.90092pt.
+<media/image15_b.png, id=121, 237.834pt x 152.0955pt>
+File: media/image15_b.png Graphic file (type png)
+<use media/image15_b.png>
+Package pdftex.def Info: media/image15_b.png  used on input line 346.
+(pdftex.def)             Requested size: 241.84843pt x 154.66423pt.
+<media/image16.png, id=122, 505.89pt x 258.9675pt>
+File: media/image16.png Graphic file (type png)
+<use media/image16.png>
+Package pdftex.def Info: media/image16.png  used on input line 361.
+(pdftex.def)             Requested size: 341.43306pt x 174.78365pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<media/image17.png, id=123, 393.26926pt x 216.20775pt>
+File: media/image17.png Graphic file (type png)
+<use media/image17.png>
+Package pdftex.def Info: media/image17.png  used on input line 372.
+(pdftex.def)             Requested size: 341.43306pt x 187.71652pt.
+[25 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image14.png> </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image15_a.png> </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image15_b.png>]
+<media/image18.png, id=131, 390.86024pt x 174.6525pt>
+File: media/image18.png Graphic file (type png)
+<use media/image18.png>
+Package pdftex.def Info: media/image18.png  used on input line 409.
+(pdftex.def)             Requested size: 341.43306pt x 152.57004pt.
+ [26 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image16.png> </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image17.png>] [27 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image18.png>] [28]
+
+LaTeX Warning: Reference `fig:image19' on page 29 undefined on input line 481.
+
+<media/image19.png, id=145, 505.89pt x 248.42813pt>
+File: media/image19.png Graphic file (type png)
+<use media/image19.png>
+Package pdftex.def Info: media/image19.png  used on input line 485.
+(pdftex.def)             Requested size: 426.79134pt x 209.58797pt.
+[29 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image19.png>]
+
+LaTeX Warning: Reference `equation:eq12' on page 30 undefined on input line 506.
+
+[30]
+<media/image20.png, id=153, 1209.51875pt x 968.61874pt>
+File: media/image20.png Graphic file (type png)
+<use media/image20.png>
+Package pdftex.def Info: media/image20.png  used on input line 551.
+(pdftex.def)             Requested size: 312.9803pt x 250.63776pt.
+
+
+LaTeX Warning: Reference `fig:image21' on page 31 undefined on input line 555.
+
+<media/image21.png, id=154, 1210.5225pt x 971.63pt>
+File: media/image21.png Graphic file (type png)
+<use media/image21.png>
+Package pdftex.def Info: media/image21.png  used on input line 559.
+(pdftex.def)             Requested size: 312.9803pt x 251.20938pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package natbib Warning: Citation `lcl2012' on page 31 undefined on input line 568.
+
+[31 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image20.png>]
+
+LaTeX Warning: Reference `equation:eq16' on page 32 undefined on input line 574.
+
+
+LaTeX Warning: Reference `equation:eq17' on page 32 undefined on input line 574.
+
+[32 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image21.png>]
+
+LaTeX Warning: Reference `equation:eq24' on page 33 undefined on input line 606.
+
+
+LaTeX Warning: Reference `equation:eq23' on page 33 undefined on input line 615.
+
+[33]
+<media/image22.png, id=169, 1209.51875pt x 968.61874pt>
+File: media/image22.png Graphic file (type png)
+<use media/image22.png>
+Package pdftex.def Info: media/image22.png  used on input line 651.
+(pdftex.def)             Requested size: 312.9803pt x 250.63776pt.
+
+
+LaTeX Warning: Reference `fig:image23' on page 34 undefined on input line 655.
+
+<media/image23.png, id=170, 1210.5225pt x 971.63pt>
+File: media/image23.png Graphic file (type png)
+<use media/image23.png>
+Package pdftex.def Info: media/image23.png  used on input line 659.
+(pdftex.def)             Requested size: 312.9803pt x 251.20938pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package natbib Warning: Citation `lcl2020' on page 34 undefined on input line 668.
+
+[34 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image22.png>]
+
+LaTeX Warning: Reference `equation:eq26' on page 35 undefined on input line 677.
+
+
+LaTeX Warning: Reference `equation:eq30' on page 35 undefined on input line 697.
+
+[35 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image23.png>] [36]
+<media/image26.png, id=183, 1209.51875pt x 968.61874pt>
+File: media/image26.png Graphic file (type png)
+<use media/image26.png>
+Package pdftex.def Info: media/image26.png  used on input line 749.
+(pdftex.def)             Requested size: 312.9803pt x 250.63776pt.
+
+
+LaTeX Warning: Reference `fig:image25' on page 37 undefined on input line 753.
+
+<media/image27.png, id=184, 1210.5225pt x 971.63pt>
+File: media/image27.png Graphic file (type png)
+<use media/image27.png>
+Package pdftex.def Info: media/image27.png  used on input line 757.
+(pdftex.def)             Requested size: 312.9803pt x 251.20938pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package natbib Warning: Citation `lcl2010' on page 37 undefined on input line 766.
+
+[37 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image26.png>]
+
+LaTeX Warning: Reference `equation:eq34' on page 38 undefined on input line 768.
+
+
+LaTeX Warning: Reference `equation:eq36' on page 38 undefined on input line 768.
+
+
+LaTeX Warning: Reference `equation:eq40' on page 38 undefined on input line 796.
+
+[38 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image27.png>]
+File: media/image26.png Graphic file (type png)
+<use media/image26.png>
+Package pdftex.def Info: media/image26.png  used on input line 832.
+(pdftex.def)             Requested size: 312.9803pt x 250.63776pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: Reference `fig:image27' on page 39 undefined on input line 836.
+
+[39]
+File: media/image27.png Graphic file (type png)
+<use media/image27.png>
+Package pdftex.def Info: media/image27.png  used on input line 840.
+(pdftex.def)             Requested size: 312.9803pt x 251.20938pt.
+ [40]
+
+Package natbib Warning: Citation `lcl2014' on page 41 undefined on input line 849.
+
+
+Package natbib Warning: Citation `lcl2014' on page 41 undefined on input line 851.
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+)
+LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 872.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 872.
+ [41]
+<media/image28.png, id=203, 1209.51875pt x 968.61874pt>
+File: media/image28.png Graphic file (type png)
+<use media/image28.png>
+Package pdftex.def Info: media/image28.png  used on input line 907.
+(pdftex.def)             Requested size: 312.9803pt x 250.63776pt.
+
+
+LaTeX Warning: Reference `fig:image29' on page 42 undefined on input line 911.
+
+<media/image29.png, id=204, 1210.5225pt x 971.63pt>
+File: media/image29.png Graphic file (type png)
+<use media/image29.png>
+Package pdftex.def Info: media/image29.png  used on input line 915.
+(pdftex.def)             Requested size: 312.9803pt x 251.20938pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[42 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image28.png>]
+
+LaTeX Warning: Reference `equation:eq23' on page 43 undefined on input line 945.
+
+[43 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image29.png>] [44]
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 984.
+
+
+LaTeX Warning: Command \textmu invalid in math mode on input line 984.
+
+Missing character: There is no µ in font cmr12!
+[45] [46] [47]
+<media/image30.png, id=226, 894.34125pt x 633.86812pt>
+File: media/image30.png Graphic file (type png)
+<use media/image30.png>
+Package pdftex.def Info: media/image30.png  used on input line 1117.
+(pdftex.def)             Requested size: 483.69684pt x 342.82532pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<media/image31.png, id=227, 284.8095pt x 177.0615pt>
+File: media/image31.png Graphic file (type png)
+<use media/image31.png>
+Package pdftex.def Info: media/image31.png  used on input line 1128.
+(pdftex.def)             Requested size: 341.43306pt x 212.28357pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[48]
+Overfull \vbox (14.7521pt too high) has occurred while \output is active []
+
+ [49 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image30.png> </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image31.png>]
+<media/table2.png, id=235, 544.28343pt x 137.7647pt>
+File: media/table2.png Graphic file (type png)
+<use media/table2.png>
+Package pdftex.def Info: media/table2.png  used on input line 1141.
+(pdftex.def)             Requested size: 398.33858pt x 100.82384pt.
+<media/image32.png, id=236, 264.23718pt x 165.61874pt>
+File: media/image32.png Graphic file (type png)
+<use media/image32.png>
+Package pdftex.def Info: media/image32.png  used on input line 1146.
+(pdftex.def)             Requested size: 341.43306pt x 214.01549pt.
+<media/image33.png, id=237, 903.375pt x 624.08156pt>
+File: media/image33.png Graphic file (type png)
+<use media/image33.png>
+Package pdftex.def Info: media/image33.png  used on input line 1157.
+(pdftex.def)             Requested size: 483.69684pt x 334.16125pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<media/image34.png, id=238, 676.02562pt x 406.51875pt>
+File: media/image34.png Graphic file (type png)
+<use media/image34.png>
+Package pdftex.def Info: media/image34.png  used on input line 1167.
+(pdftex.def)             Requested size: 341.43306pt x 205.31825pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[50 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/table2.png> </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image32.png>] [51 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image33.png> </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image34.png>]
+<media/image38.png, id=248, 556.32843pt x 324.46219pt>
+File: media/image38.png Graphic file (type png)
+<use media/image38.png>
+Package pdftex.def Info: media/image38.png  used on input line 1195.
+(pdftex.def)             Requested size: 341.43306pt x 199.1346pt.
+<media/image35.png, id=249, 233.37187pt x 86.57344pt>
+File: media/image35.png Graphic file (type png)
+<use media/image35.png>
+Package pdftex.def Info: media/image35.png  used on input line 1203.
+(pdftex.def)             Requested size: 341.43306pt x 126.67487pt.
+ [52 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image38.png> </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image35.png>]
+<media/image36.png, id=254, 239.39438pt x 130.23656pt>
+File: media/image36.png Graphic file (type png)
+<use media/image36.png>
+Package pdftex.def Info: media/image36.png  used on input line 1244.
+(pdftex.def)             Requested size: 341.43306pt x 185.7619pt.
+ [53 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image36.png>]
+<media/image37.png, id=259, 469.755pt x 243.15843pt>
+File: media/image37.png Graphic file (type png)
+<use media/image37.png>
+Package pdftex.def Info: media/image37.png  used on input line 1258.
+(pdftex.def)             Requested size: 426.79134pt x 220.91832pt.
+<media/image39.png, id=260, 611.28375pt x 220.57407pt>
+File: media/image39.png Graphic file (type png)
+<use media/image39.png>
+Package pdftex.def Info: media/image39.png  used on input line 1270.
+(pdftex.def)             Requested size: 455.24408pt x 164.26897pt.
+<media/image40.png, id=261, 1009.52156pt x 625.58719pt>
+File: media/image40.png Graphic file (type png)
+<use media/image40.png>
+Package pdftex.def Info: media/image40.png  used on input line 1280.
+(pdftex.def)             Requested size: 483.69684pt x 299.74388pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<media/image41.png, id=262, 887.56593pt x 509.65407pt>
+File: media/image41.png Graphic file (type png)
+<use media/image41.png>
+Package pdftex.def Info: media/image41.png  used on input line 1290.
+(pdftex.def)             Requested size: 426.79134pt x 245.06667pt.
+[54 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image37.png> </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image39.png>] [55 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image40.png> </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image41.png>]
+<media/image42.png, id=271, 930.47626pt x 620.3175pt>
+File: media/image42.png Graphic file (type png)
+<use media/image42.png>
+Package pdftex.def Info: media/image42.png  used on input line 1305.
+(pdftex.def)             Requested size: 483.69684pt x 322.46284pt.
+<media/image43.png, id=272, 712.16063pt x 462.97969pt>
+File: media/image43.png Graphic file (type png)
+<use media/image43.png>
+Package pdftex.def Info: media/image43.png  used on input line 1315.
+(pdftex.def)             Requested size: 426.79134pt x 277.45792pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<media/image44.png, id=273, 651.18282pt x 166.37157pt>
+File: media/image44.png Graphic file (type png)
+<use media/image44.png>
+Package pdftex.def Info: media/image44.png  used on input line 1330.
+(pdftex.def)             Requested size: 483.69684pt x 123.58266pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<media/image45.png, id=274, 409.53pt x 227.34938pt>
+File: media/image45.png Graphic file (type png)
+<use media/image45.png>
+Package pdftex.def Info: media/image45.png  used on input line 1340.
+(pdftex.def)             Requested size: 426.79134pt x 236.94772pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(/home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/first_semester.bbl [56 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image42.png>] [57 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image43.png> </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image44.png>] [58 </home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/media/image45.png>])
+
+Package natbib Warning: There were undefined citations.
+
+[59
+
+] (/home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/first_semester.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+
+/home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/first_semester.aux:249: Package natbib Error: Bibliography not compatible with author-year citations.
+(natbib)                Press <return> to continue in numerical citation style.
+
+See the natbib package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.249 ...and\NAT@force@numbers{}\NAT@force@numbers
+                                                  
+Check the bibliography entries for non-compliant syntax,
+or select author-year BibTeX style, e.g. plainnat
+
+)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 6849 strings out of 483183
+ 98118 string characters out of 5966291
+ 524911 words of memory out of 5000000
+ 21748 multiletter control sequences out of 15000+600000
+ 557729 words of font info for 70 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 50i,14n,49p,946b,2163s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on /home/menna/repos/Fast-OFBC-Graduation-Project/AC_DC_Conversion/documentation/first_semester.pdf (59 pages, 2174248 bytes).
+PDF statistics:
+ 341 PDF objects out of 1000 (max. 8388607)
+ 182 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 231 words of extra memory for PDF output out of 10000 (max. 10000000)
+
