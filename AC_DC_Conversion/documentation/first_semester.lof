@@ -33,3 +33,19 @@
 \contentsline {figure}{\numberline {4.20}{\ignorespaces The Current and The Phase Voltage of Phase R -- Method IV\relax }}{40}%
 \contentsline {figure}{\numberline {4.21}{\ignorespaces The Output Voltage on The DC-Link on Simulink -- Method V\relax }}{42}%
 \contentsline {figure}{\numberline {4.22}{\ignorespaces The Current and The Phase Voltage of Phase R -- Method V\relax }}{43}%
+\contentsline {figure}{\numberline {4.23}{\ignorespaces The Schematic of the Inverter Module\relax }}{49}%
+\contentsline {figure}{\numberline {4.24}{\ignorespaces The PCB 3D Model of the Inverter Circuit\relax }}{49}%
+\contentsline {figure}{\numberline {4.25}{\ignorespaces $V_{out}$ VS $I_{p}$ Plot\relax }}{50}%
+\contentsline {figure}{\numberline {4.26}{\ignorespaces The Schematic of the Current Sensor\relax }}{51}%
+\contentsline {figure}{\numberline {4.27}{\ignorespaces The PCB 3D Model of the Current Sensor\relax }}{51}%
+\contentsline {figure}{\numberline {4.28}{\ignorespaces The Schematic of the Supply for the Voltage Sensor\relax }}{52}%
+\contentsline {figure}{\numberline {4.29}{\ignorespaces The Internal Connection of the Voltage Sensor\relax }}{52}%
+\contentsline {figure}{\numberline {4.30}{\ignorespaces Op-Amp Circuit\relax }}{53}%
+\contentsline {figure}{\numberline {4.31}{\ignorespaces The Circuit Diagram of the Op-Amp\relax }}{54}%
+\contentsline {figure}{\numberline {4.32}{\ignorespaces The Schematic of the Op-Amp Circuit\relax }}{54}%
+\contentsline {figure}{\numberline {4.33}{\ignorespaces The Schematic of the Voltage Sensor\relax }}{55}%
+\contentsline {figure}{\numberline {4.34}{\ignorespaces The PCB 3D Model of the Voltage Sensor\relax }}{55}%
+\contentsline {figure}{\numberline {4.35}{\ignorespaces The Schematic of the DSP Interfacing Board\relax }}{56}%
+\contentsline {figure}{\numberline {4.36}{\ignorespaces The PCB 3D Model of the DSP Interfacing Board\relax }}{57}%
+\contentsline {figure}{\numberline {4.37}{\ignorespaces The Schematic of the DC-Link\relax }}{58}%
+\contentsline {figure}{\numberline {4.38}{\ignorespaces The PCB 3D Model of the DC-Link\relax }}{59}%

@@ -18,7 +18,7 @@
 
 \begin{document}
 \maketitle
-\setcounter{tocdepth}{4}
+\setcounter{tocdepth}{3}
 \tableofcontents
 \listoffigures
 \listoftables
@@ -1078,6 +1078,270 @@ Therefore, the DC-link capacitance is equal to:
 \[C_{dc}\  = \ \frac{2*10000}{800^{2}*\ 50}\  = \ 0.625mF\]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Component Selection}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The Inverter}
+We have chosen an inverter module to begin with, to make the prototype of the main board of the AC/DC Rectification stage in our project.
+
+We need to build a charger that can reach 7K watt to reach 22K watt by cascading, so we begin to build a prototype with lower rating to confirm that our topology is working well before evaluating it in high power rating.
+
+Our prototype ratings are 1K watt with 200 V DC and 5 A at output, so we have chosen a 3-ph inverter ic\_IKCM30F60GDXKMA1, its rating is 600V, 35A. We can with this module get about 5K watt stable.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{The Features}
+Fully isolated Dual In-Line molded module
+\begin{itemize}
+  \item TRENCHSTOP™ IGBTs
+  \item	Rugged SOI gate driver technology with stability against transient and negative voltage
+  \item	Allowable negative VS potential up to -11V for signal transmission at VBS=15V
+  \item	Integrated bootstrap functionality
+  \item	Over current shutdown
+  \item	Temperature monitor
+  \item	Under-voltage lockout at all channels
+  \item	Low side emitter pins accessible for all phase current monitoring (open emitter)
+  \item	Cross-conduction prevention
+  \item	All six switches turn off during protection.
+  \item	Lead-free terminal plating; RoHS compliant
+  \item	Extremely low thermal resistance due to DCB
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{The Hardware Schematic}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width = 17cm]{image30.png}
+  \caption{The Schematic of the Inverter Module}
+  \label{fig:image30}
+\end{figure}
+We bias the bootstrap with 15V using DC/DC transformer to make an isolation. Build the protection circuit from overcurrent and overheating. The Module can shutdown itself with the ITRIP pin that has a thermistor and send a signal (Volt Fault Out) to the microcontroller to alarm the fault.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{The PCB 3D Model}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width = 12cm]{image31.png}
+  \caption{The PCB 3D Model of the Inverter Circuit}
+  \label{fig:image31}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The Current Sensor}
+The core of our topology is the closed loop feedback, so the measurement must be as we could to be accurate. We have chosen CAS transducer, the latest version of the LTS series. The nominal current is 25A to help us with future product.
+
+The transducer has a multifunctional primary circuit that changes the nominal current lower to get more accuracy.
+\begin{table}[h!]
+  \centering
+  \includegraphics[width=14cm]{table2.png}
+  \caption{Recommended Connections for Different Sensitivities}
+\end{table}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width = 12cm]{image32.png}
+  \caption{$V_{out}$ VS $I_{p}$ Plot}
+  \label{fig:image32}
+\end{figure}
+In our Prototype we used the second technique that nominal current 12A.The most advantage is that the output signal does not need to rescale or biasing and ready to send to the microcontroller.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{The Hardware Schematic}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width = 17cm]{image33.png}
+  \caption{The Schematic of the Current Sensor}
+  \label{fig:image33}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{The PCB 3D Model}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width = 12cm]{image34.png}
+  \caption{The PCB 3D Model of the Current Sensor}
+  \label{fig:image34}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The Voltage Sensor}
+We have chosen LV 25-P voltage transducer to get the voltage feedback
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{The Features}
+\begin{itemize}
+  \item Current equal to 10mA and Voltage ranging from 10v up to 500v
+  \item Excellent accuracy
+  \item	Incredibly good linearity
+  \item	Low thermal drift
+  \item	Low response time
+  \item	High bandwidth
+  \item	High immunity to external interference
+  \item	Low disturbance in common mode.
+\end{itemize}
+This transducer needs an external circuit to rescale and biasing the output signal before the controller, so we used an Op-Amp circuit after simulating it and get the desired output.
+
+The transducer and the op-amp needed a positive and negative source power, so we used this topology to get the negative source.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width = 12cm]{image38.png}
+  \caption{The Schematic of the Supply for the Voltage Sensor}
+  \label{fig:image38}
+\end{figure}
+
+The following figure shows the internal connection of the sensor:
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width = 12cm]{image35.png}
+  \caption{The Internal Connection of the Voltage Sensor}
+  \label{fig:image35}
+\end{figure}
+
+Primary Side (High Voltage):
+\begin{itemize}
+  \item P1 and P2:  terminals Connected to the voltage to be measured.
+  \item R1 (External Resistor): Sets the primary voltage range corresponding to primary current of 10 mA.
+\end{itemize}
+Secondary Side (Low Voltage):
+\begin{itemize}
+  \item +Vc: Connect this terminal to a positive power supply (5 to 15 V DC).
+  \item -Vc: Connect this terminal to the negative power supply.
+  \item	OUT: signal to the microcontroller
+  \item	Rm (Scaling Resistor): Sets the output voltage range and sensitivity.
+\end{itemize}
+The resistors values can be calculated using the following equations:
+\begin{equation}
+  R_{m} = \ \frac{V_{out}}{I_{out}} = 132\Omega
+  \label{equation:eq44}
+\end{equation}
+where
+\begin{itemize}
+  \item \(V_{out}\) is the desired output voltage. (designed for 3.3v)
+  \item \(I_{out}\) is the secondary circuit current.
+\end{itemize}
+\begin{equation}
+  R_{1} = \ \frac{V_{in}}{I_{p}} = 50K\Omega
+  \label{equation:eq45}
+\end{equation}
+where \(V_{in}\) is equal to 500v and \(I_{out}\) is 10mA.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Interfacing with Microcontroller - Op-Amp Technique}
+In case of AC voltage measurements, dsp cannot receives negative voltage So we need to shift the signal out of the transducer to the positive and rescale it to get the desired output. Opamp adder circuit will preform this operation to convert .(-3.3v,3.3v) to (0v,3.3v).
+
+\emph{Procedures to Design the Op-Amp circuit}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width = 12cm]{image36.png}
+  \caption{Op-Amp Circuit}
+  \label{fig:image36}
+\end{figure}
+where the first terminal represents the scale of input signal and the second terminal is the shift for scaled signal.
+
+For input signal from sensor ,the AC voltage is first scaled to half, then shifted above x axis by this scaled value to obtain its peak positive value (\(V_{in}\)) and 0v.
+\begin{equation}
+  -V_{out}=\left(\frac{R_{f}}{R_{1}}\ast V_{in}\right)+\left(\frac{R_{f}}{R_{2}}\ast V2\right)
+  \label{equation:eq46}
+\end{equation}
+for AC \(V_{in}\) = 3.3V
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width = 15cm]{image37.png}
+  \caption{The Circuit Diagram of the Op-Amp}
+  \label{fig:image37}
+\end{figure}
+\begin{enumerate}
+  \item Scale the input signal to \(\frac{1}{2}V_{in}\)
+  \newline\(\frac{R_{f}}{R1}\ast V_{in}=3.3/2,   assume R_{f} =10k\Omega , so R_{1} =20k\Omega\)
+  \item Shift by \(\frac{1}{2}V_{in}\)
+  \newline\(\frac{R_{f}}{R_{2}}\ast(V_{2})=3.3/2  ,assume V_{2} =-12v , so R_{2} = 72.7k\Omega\)
+\end{enumerate}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width = 16cm]{image39.png}
+  \caption{The Schematic of the Op-Amp Circuit}
+  \label{fig:image39}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{The Hardware Schematic}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width = 17cm]{image40.png}
+  \caption{The Schematic of the Voltage Sensor}
+  \label{fig:image40}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{The PCB 3D Model}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width = 15cm]{image41.png}
+  \caption{The PCB 3D Model of the Voltage Sensor}
+  \label{fig:image41}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The Microcontroller}
+We have chosen to use DSP LaunchpadF28069M, because it is the easier controller to generate our model on it. We built a DSP interfacing with the inverter using optocoupler circuit to make the suitable isolation.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{The Hardware Schematic}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width = 17cm]{image42.png}
+  \caption{The Schematic of the DSP Interfacing Board}
+  \label{fig:image42}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{The PCB 3D Model}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width = 15cm]{image43.png}
+  \caption{The PCB 3D Model of the DSP Interfacing Board}
+  \label{fig:image43}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{DC-Link}
+According to our calculations that we have done in previous sections, we have designed a DC-Link to suit our project to literally link between the AC/DC Converion and the DC/DC Conversion boards.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{The Hardware Schematic}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width = 17cm]{image44.png}
+  \caption{The Schematic of the DC-Link}
+  \label{fig:image44}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{The PCB 3D Model}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width = 15cm]{image45.png}
+  \caption{The PCB 3D Model of the DC-Link}
+  \label{fig:image45}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \bibliographystyle{plain}
 \bibliography{references}

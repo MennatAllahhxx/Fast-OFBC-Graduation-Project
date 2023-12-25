@@ -54,3 +54,22 @@
 \contentsline {subsection}{\numberline {4.5.3}Chosen Method}{47}%
 \contentsline {subsubsection}{Design Example - Low Power}{47}%
 \contentsline {subsubsection}{Design Example - Low Power}{47}%
+\contentsline {section}{\numberline {4.6}Component Selection}{48}%
+\contentsline {subsection}{\numberline {4.6.1}The Inverter}{48}%
+\contentsline {subsubsection}{The Features}{48}%
+\contentsline {subsubsection}{The Hardware Schematic}{48}%
+\contentsline {subsubsection}{The PCB 3D Model}{49}%
+\contentsline {subsection}{\numberline {4.6.2}The Current Sensor}{49}%
+\contentsline {subsubsection}{The Hardware Schematic}{50}%
+\contentsline {subsubsection}{The PCB 3D Model}{50}%
+\contentsline {subsection}{\numberline {4.6.3}The Voltage Sensor}{50}%
+\contentsline {subsubsection}{The Features}{50}%
+\contentsline {subsubsection}{Interfacing with Microcontroller - Op-Amp Technique}{53}%
+\contentsline {subsubsection}{The Hardware Schematic}{55}%
+\contentsline {subsubsection}{The PCB 3D Model}{55}%
+\contentsline {subsection}{\numberline {4.6.4}The Microcontroller}{56}%
+\contentsline {subsubsection}{The Hardware Schematic}{56}%
+\contentsline {subsubsection}{The PCB 3D Model}{56}%
+\contentsline {subsection}{\numberline {4.6.5}DC-Link}{56}%
+\contentsline {subsubsection}{The Hardware Schematic}{56}%
+\contentsline {subsubsection}{The PCB 3D Model}{56}%
