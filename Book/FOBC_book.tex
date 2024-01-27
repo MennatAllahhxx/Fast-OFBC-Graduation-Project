@@ -10,6 +10,7 @@
 \usepackage{booktabs}
 \usepackage{caption}
 \usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
 
 \graphicspath{ {media/} }
 \setlength{\parskip}{0.25cm}
@@ -39,6 +40,10 @@ The choice of AC over DC also considered the issue of power losses in transmissi
 Currently, modern technologies enable efficient bidirectional conversion between AC and DC with high power and efficiency. While AC mains voltages are likely to remain standard soon, there is a growing interest in reconsidering DC power distribution due to our increasing dependence on electrical power. Modern power distribution involves multiple interconnected sources forming a power grid. Transmitting power over long distances (\(>\)500km) using high voltage DC has become more appealing because it eliminates impedance losses, and generators do not need to be synchronized to the same frequency or voltage.
 
 For instance, a notable example of high voltage DC power transmission is a 2000MW link connecting England and France. This interconnection allows the two countries to exchange power based on domestic demand, highlighting the advantages of high voltage DC in a modern power grid. As technology continues to evolve, the debate between AC and DC power distribution will persist, driven by factors such as efficiency, cost, and the demands of our increasingly interconnected and power-dependent world.
+
+AC/DC converters are the backbone components for expanding and improving the functioning of electrical vehicles (EVs). Primarily, an outlet delivers AC power, whereas EV batteries function with DC power for charging the battery. Thus, there is a need for an AC/DC converter for converting AC power to DC power. It is also the major component of an EV battery charger and enhances the input current shape for power-factor correction and harmonic reduction.
+
+The power range of fast charging is above 50 kW, which is considered high according to industry standards. So there is a need for a larger AC/DC converter to supply this extra power for fast charging. Thus, high-power charging is best carried out where AC/DC converters are built into the charging station and not installed inside the vehicle due to size constraints\cite{acdc2023}. We will focus on off-board fast chargers for electric vehicles.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -57,25 +62,25 @@ A half-wave rectifier is a circuit that transforms only half of the alternating 
 \begin{figure}[h]
   \centering
   \includegraphics[width=13cm]{image1.png}
-  \caption{Half-Wave Rectification Process}
+  \caption{Half-wave rectification process}
   \label{fig:image1}
 \end{figure}
 
-In the process of half-wave rectification, the AC is initially stepped up or down to the desired voltage using a transformer. The transformed AC is then supplied to the diode. Here is how the rectification unfolds: During the positive half cycle of AC, the diode, operating in a forward-biased state, acts as a short circuit, allowing electric current to pass through. Conversely, during the negative half cycle of AC, the diode becomes reverse-biased, acting as an open circuit and preventing conduction. Consequently, the voltage at the load terminals is present only during the positive half cycle of AC. Thus, the alternating current is converted into direct current, flowing in a single direction, but only during one half cycle of AC.
+In the process of half-wave rectification, the AC is initially  supplied to the diode. Here is how the rectification unfolds: During the positive half cycle of AC, the diode, operating in a forward-biased state, acts as a short circuit, allowing electric current to pass through. Conversely, during the negative half cycle of AC, the diode becomes reverse-biased, acting as an open circuit and preventing conduction. Consequently, the voltage at the load terminals is present only during the positive half cycle of AC. Thus, the alternating current is converted into direct current, flowing in a single direction, but only during one half cycle of AC.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Full-Wave Rectification}
-In contrast to half-wave rectifier, a full-wave rectifier transforms the entire cycle of alternating current into direct current. The circuit for a full-wave rectifier comprises a center-tapped step-down transformer and two semiconductor diodes. The anode terminals of the diodes connect to the secondary winding terminals of the transformer, while the cathode terminals link to a common point. The load resistor is connected between the common terminal and the center-tapping point of the transformer.
+In contrast to half-wave rectifier, a full-wave rectifier transforms the entire cycle of alternating current into direct current. The circuit for a full-wave rectifier comprises four semiconductor diodes. Two of the four terminals of the diodes are connected to the AC supply, while the other two terminals link to the load resistor. 
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=13cm]{image2.png}
-  \caption{Full-Wave Rectification Process}
+  \caption{Full-wave rectification process}
   \label{fig:image2}
 \end{figure}
 
-During the positive half cycle of AC, diode D\textsubscript{1} is forward biased, and diode D\textsubscript{2} is reverse biased. Consequently, diode D\textsubscript{1} conducts, allowing current to flow through D\textsubscript{1} and the load resistor R\textsubscript{L}. In the negative half cycle of AC, the situation reverses: diode D\textsubscript{1} becomes reverse biased, and diode D\textsubscript{2} becomes forward biased. Only diode D\textsubscript{2} is conducted during this negative half cycle, and the current flows through D\textsubscript{2} and the load resistor R\textsubscript{L}. The circuit and output voltage waveform for the full-wave rectifier are illustrated in Figure \ref{fig:image2}. This way, a full-wave rectifier efficiently converts the entire AC cycle into DC \cite{rectifier2023}.
+During the positive half cycle of AC, diode D\textsubscript{1} and diode D\textsubscript{2} are forward biased, and diode D\textsubscript{3} and diode D\textsubscript{4} are reverse biased. Consequently, diodes D\textsubscript{1} and D\textsubscript{2} conduct, allowing current to flow through D\textsubscript{1}, D\textsubscript{2} and the load resistor R\textsubscript{L}. In the negative half cycle of AC, the situation reverses: diodes D\textsubscript{1} and D\textsubscript{2} become reverse biased, and diodes D\textsubscript{3} and D\textsubscript{4} become forward biased. Only diodes D\textsubscript{3} and D\textsubscript{4} are conducted during this negative half cycle, and the current flows through D\textsubscript{3}, D\textsubscript{4} and the load resistor R\textsubscript{L}. The circuit and output voltage waveform for the full-wave rectifier are illustrated in Figure \ref{fig:image2}. This way, a full-wave rectifier efficiently converts the entire AC cycle into DC \cite{rectifier2023}.
 
 While the explanations above focus on a single-phase AC system, they can be extended to three-phase systems commonly used in fast-charging offboard chargers. In a three-phase half-wave rectifier, the system requires three diodes, and for the full-bridge system, six diodes are necessary. The adaptability of rectification principles to different configurations underscores their significance in converting AC to DC, a crucial requirement for many electronic devices and power systems.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -92,7 +97,7 @@ The simplest rectifier configuration is the three-phase diode rectifier, compris
 \begin{figure}[h]
   \centering
   \includegraphics[width=10cm]{image3.png}
-  \caption{Three-Phase Passive Rectifier}
+  \caption{Three-phase passive rectifier}
   \label{fig:image3}
 \end{figure}
 
@@ -108,7 +113,7 @@ The three-phase Vienna rectifier, illustrated in \ref{fig:image4}, includes thre
 \begin{figure}[h]
   \centering
   \includegraphics[width=10cm]{image4.png}
-  \caption{Three-Phase Vienna Rectifier}
+  \caption{Three-phase vienna rectifier}
   \label{fig:image4}
 \end{figure}
 
@@ -122,7 +127,7 @@ The configuration for the three-phase two-level boost-type rectifier is depicted
 \begin{figure}[h]
   \centering
   \includegraphics[width=10cm]{image5.png}
-  \caption{Three-Phase Two-Level Six-Switch Boost-Type Rectifier}
+  \caption{Three-phase two-level six-switch boost-type rectifier}
   \label{fig:image5}
 \end{figure}
 
@@ -138,7 +143,7 @@ The configuration of a three-phase three-level neutral point clamped (NPC) conve
 \begin{figure}[h]
   \centering
   \includegraphics[width=10cm]{image6.png}
-  \caption{Three-Phase Three-Level Neutral Point Clamped Converter}
+  \caption{Three-phase three-level neutral point clamped converter}
   \label{fig:image6}
 \end{figure}
 
@@ -153,7 +158,7 @@ Three-phase three-level T-type converter is a bidirectional variation of the thr
 \begin{figure}[h]
   \centering
   \includegraphics[width=10cm]{image7.png}
-  \caption{Three-Phase Three-Level T-Type Converter}
+  \caption{Three-phase three-level T-type converter}
   \label{fig:image7}
 \end{figure}
 
@@ -167,6 +172,12 @@ The two switches between positive and negative DC link block voltages between 0.
 We will now address challenges through the design and implementation of a closed-loop AC/DC rectifier system. The closed-loop architecture, with its feedback mechanism, promises not only enhanced control over the rectification process but also the mitigation of issues associated with traditional rectifiers. The journey towards an optimized closed-loop system involves a meticulous exploration of key components, each playing a pivotal role in achieving the desired efficiency and stability.
 
 The aims of this research encompass a detailed examination of critical aspects, including filter selection, DC-link configuration, phase-locked loop (PLL), Clarke and Park transformations, and Proportional-Integral-Derivative (PID) control. 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=17cm]{media/image47.jpg}
+  \caption{The implemented model of 10KW system using VOC}
+  \label{fig:image47}
+\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -183,7 +194,7 @@ Proportional or P- controller gives an output that is proportional to error e(t)
 \begin{figure}[h]
   \centering
   \includegraphics[width=15cm]{image8.png}
-  \caption{The Effect of P-Gain on a System}
+  \caption{The effect of P-gain on a system}
   \label{fig:image8}
 \end{figure}
 
@@ -197,12 +208,12 @@ The resulting error is multiplied with a proportional constant to get the output
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{I-Controller}
-Due to the limitation of p-controller where there always exists an offset between the process variable and setpoint, I-controller is needed, which supplies necessary action to cut the steady-state error.
+Due to the limitation of p-controller where there always exists an offset between the process variable and set-point, I-controller is needed, which supplies necessary action to cut the steady-state error.
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=10cm]{image9.png}
-  \caption{PI-Control Process}
+  \caption{PI-control process}
   \label{fig:image9}
 \end{figure}
 
@@ -215,12 +226,12 @@ It integrates the error over a period of time until the error value reaches zero
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{D-Controller}
-I-controller does not have the capability to predict the future behavior of error. So, it reacts normally once the setpoint is changed. D-controller overcomes this problem by expecting the future behavior of the error. Its output depends on the rate of change of error with respect to time, multiplied by derivative constant. It gives the kick start for the output thereby increasing system response.
+I-controller does not have the capability to predict the future behavior of error. So, it reacts normally once the set-point is changed. D-controller overcomes this problem by expecting the future behavior of the error. Its output depends on the rate of change of error with respect to time, multiplied by derivative constant. It gives the kick start for the output thereby increasing system response.
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=14cm]{image10.png}
-  \caption{PID Control on a System}
+  \caption{PID control on a system}
   \label{fig:image10}
 \end{figure}
 
@@ -231,13 +242,6 @@ In \ref{fig:image10}, response of D, the controller is more, compared to the PI 
 \end{equation}
 
 The following figure shows the structure of the PID controller. It consists of a PID block which gives its output to the process block. Process/plant consists of final control devices like actuators, control valves, and other control devices to control various processes of industry/plant. A feedback signal from the process plant is compared with a set point or reference signal r(t) and the corresponding error signal e(t) is fed to the PID algorithm.
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=12cm]{image11.png}
-  \caption{PID Control Process}
-  \label{fig:image11}
-\end{figure}
 
 According to the proportional, integral, and derivative control calculations in the algorithm, the controller produces a combined response or controlled output which is applied to plant control devices.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -254,17 +258,17 @@ The following figure shows the main control circuit which is used to control the
 \begin{figure}[h]
   \centering
   \includegraphics[width=15cm]{image12.png}
-  \caption{Control Circuit of AFE with 800V Output Voltage}
+  \caption{Control circuit of AFE (Active Front-end Rectifier) with 800V output voltage}
   \label{fig:image12}
 \end{figure}
 
 There are a lot of methods to control but we used a Voltage Oriented Control for its simplicity \cite{pid2015}.
-In voltage-oriented control (VOC), the line input current is orientedwith respect to the line voltage vector. The line voltage vector can be obtained by measurement by using sensors or estimation. In synchronous rotating reference frame, the d-axis is aligned with the line voltage vector. The d-axis component of the line current ``id'' is proportional to the active power and its q-axis component is proportional to reactive power. To achieve unity power factor the reactive component of current reference\(\ \mathbf{i}_{\mathbf{q}}^{\mathbf{*}}\) is set to zero. While the active component of current reference \(\mathbf{i}_{\mathbf{d}}^{\mathbf{*}}\mathbf{\ }\)is obtained from the PI controller, which gives the output by comparing the dc link voltage at the output with the reference voltage set as per the load requirements.
+In voltage-oriented control (VOC), the line input current is oriented with respect to the line voltage vector. The line voltage vector can be obtained by measurement by using sensors or estimation. In synchronous rotating reference frame, the d-axis is aligned with the line voltage vector. The d-axis component of the line current ``id'' is proportional to the active power and its q-axis component is proportional to reactive power. To achieve unity power factor the reactive component of current reference\(\ \mathbf{i}_{\mathbf{q}}^{\mathbf{*}}\) is set to zero. While the active component of current reference \(\mathbf{i}_{\mathbf{d}}^{\mathbf{*}}\mathbf{\ }\)is obtained from the PI controller, which gives the output by comparing the dc link voltage at the output with the reference voltage set as per the load requirements.
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=15cm]{image13.png}
-  \caption{PI Control Loop of AFE}
+  \caption{PI control loop of AFE}
   \label{fig:image13}
 \end{figure}
 
@@ -327,12 +331,12 @@ But we can get rid of these problems by using closed loop phase locked loop (PLL
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Method II}
-Here we also start by transforming ABC signals into \(\alpha - \beta\) signals then into dq voltages as shown in the figure below.
+Here we also start by transforming ABC signals into \(\alpha - \beta\) signals then into dq voltages as shown in the figure below, this method is also called voltage oriented control (VOC), where the line input current is oriented with respect to the line voltage vector \cite{pll2016}.
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=13cm]{image14.png}
-  \caption{PLL Control}
+  \caption{PLL control using VOC method}
   \label{fig:image14}
 \end{figure}
 
@@ -341,11 +345,11 @@ We can observe from the phasor diagram that D-axis is not aligned with the grid 
 \begin{figure}[h]
   \centering
 
-  \subfloat[With q-Component]{\includegraphics[width=0.5\textwidth]{image15_a.png}\label{fig:image15_a}}
+  \subfloat[With q-component]{\includegraphics[width=0.5\textwidth]{image15_a.png}\label{fig:image15_a}}
   \hfill
-  \subfloat[Without q-Component]{\includegraphics[width=0.5\textwidth]{image15_b.png}\label{fig:image15_b}}
+  \subfloat[Without q-component]{\includegraphics[width=0.5\textwidth]{image15_b.png}\label{fig:image15_b}}
 
-  \caption{\(\alpha - \beta\) Signals to d-q Signals}
+  \caption{\(\alpha - \beta\) signals to d-q signals}
   \label{fig:image15}
 \end{figure}
 
@@ -359,7 +363,7 @@ Clarke and Park transforms are commonly used in field-oriented control of three-
 \begin{figure}[h]
   \centering
   \includegraphics[width=12cm]{image16.png}
-  \caption{ABC Frame}
+  \caption{ABC frame}
   \label{fig:image16}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -370,7 +374,7 @@ Clarke and Park transforms are commonly used in field-oriented control of three-
 \begin{figure}[h]
   \centering
   \includegraphics[width=12cm]{image17.png}
-  \caption{Clarke Transform}
+  \caption{Clarke transform}
   \label{fig:image17}
 \end{figure}
 
@@ -407,7 +411,7 @@ where
 \begin{figure}[h]
   \centering
   \includegraphics[width=12cm]{image18.png}
-  \caption{Park Transform}
+  \caption{Park transform}
   \label{fig:image18}
 \end{figure}
 
@@ -483,7 +487,7 @@ The main consideration in choosing between LC and LCL filters is whether the sys
 \begin{figure}[h]
   \centering
   \includegraphics[width=15cm]{image19.png}
-  \caption{Three-phase Inverter with Passive Filter}
+  \caption{Three-phase inverter with passive filter}
   \label{fig:image19}
 \end{figure}
 
@@ -549,7 +553,7 @@ A simulation of method I was done on MATLAB-Simulink to check the performance of
 \begin{figure}[h!]
   \centering
   \includegraphics[width=11cm]{image20.png}
-  \caption{The Output Voltage on The DC-Link on Simulink -- Method I}
+  \caption{The output voltage on the DC-link -- method I}
   \label{fig:image20}
 \end{figure}
 Also, we had to check the phase shift between voltage and current of one of the phases as shown in Figure \ref{fig:image21}:
@@ -557,15 +561,15 @@ Also, we had to check the phase shift between voltage and current of one of the 
 \begin{figure}[h!]
   \centering
   \includegraphics[width=11cm]{image21.png}
-  \caption{The Current and The Phase Voltage of Phase R -- Method I}
+  \caption{The current and the phase voltage of phase R -- method I}
   \label{fig:image21}
 \end{figure}
-Note that this is not the actual waveform of the current but a multiple of it. It was multiplied by fifty just so we can observe the two waveforms at the same time.
+Note that this is not the actual waveform of the current but a multiple of it. It was multiplied by fifty just so we can observe the two wave-forms at the same time.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Method II}
-The design of LCL filters must consider several critical constraints, including current ripple, filter size, and switching ripple attenuation. As noted in \cite{lcl2012}, the reactive power variation introduced by the capacitor can cause resonance, potentially destabilizing the system. To address this issue, a damping mechanism, such as a resistor in serieswith the capacitor, is recommended.
+The design of LCL filters must consider several critical constraints, including current ripple, filter size, and switching ripple attenuation. As noted in \cite{lcl2012}, the reactive power variation introduced by the capacitor can cause resonance, potentially destabilizing the system. To address this issue, a damping mechanism, such as a resistor in series with the capacitor, is recommended.
 
 This method meticulously outlines the LCL filter design process, emphasizing the importance of proper damping to prevent resonance. The algorithm for selecting LCL filter parameters utilizes the converter's power rating, grid frequency, and switching frequency as inputs.
 
@@ -649,7 +653,7 @@ A simulation of method II was done on MATLAB-Simulink to check the performance o
 \begin{figure}[h!]
   \centering
   \includegraphics[width=11cm]{image22.png}
-  \caption{The Output Voltage on The DC-Link on Simulink -- Method II}
+  \caption{The output voltage on the DC-link -- method II}
   \label{fig:image22}
 \end{figure}
 Also, we had to check the phase shift between voltage and current of one of the phases as shown in Figure \ref{fig:image23}:
@@ -657,10 +661,10 @@ Also, we had to check the phase shift between voltage and current of one of the 
 \begin{figure}[h!]
   \centering
   \includegraphics[width=11cm]{image23.png}
-  \caption{The Current and The Phase Voltage of Phase R -- Method II}
+  \caption{The current and the phase voltage of phase R -- method II}
   \label{fig:image23}
 \end{figure}
-Note that this is not the actual waveform of the current but a multiple of it. It was multiplied by fifty just so we can observe the two waveforms at the same time.
+Note that this is not the actual waveform of the current but a multiple of it. It was multiplied by fifty just so we can observe the two wave-forms at the same time.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -747,7 +751,7 @@ A simulation of method III was done on MATLAB-Simulink to check the performance 
 \begin{figure}[h!]
   \centering
   \includegraphics[width=11cm]{image24.png}
-  \caption{The Output Voltage on The DC-Link on Simulink -- Method III}
+  \caption{The output voltage on the DC-link -- method III}
   \label{fig:image24}
 \end{figure}
 Also, we had to check the phase shift between voltage and current of one of the phases as shown in Figure \ref{fig:image25}:
@@ -755,17 +759,18 @@ Also, we had to check the phase shift between voltage and current of one of the 
 \begin{figure}[h!]
   \centering
   \includegraphics[width=11cm]{image25.png}
-  \caption{The Current and The Phase Voltage of Phase R -- Method III}
+  \caption{The current and the phase voltage of phase R -- method III}
   \label{fig:image25}
 \end{figure}
-Note that this is not the actual waveform of the current but a multiple of it. It was multiplied by fifty just so we can observe the two waveforms at the same time.
+Note that this is not the actual waveform of the current but a multiple of it. It was multiplied by fifty just so we can observe the two wave-forms at the same time.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Method IV}
 This method according to \cite{lcl2010} deals with a design method of LCL filter for grid-connected three-phase inverters. By analyzing total harmonic distortion of the current (THD\textsubscript{i}) in the inverter-side inductor and the ripple attenuation factor of the current (RAF) injected to the grid through the LCL network, the parameter of LCL can be clearly designed.
 
-The base impedance of the system must be known before choosing the LCL filter parameters. The base values of the impedance, inductance, and capacitance are defined as in equations \ref{equation:eq34} ~ \ref{equation:eq36}.
+The base impedance of the system must be known before choosing the LCL filter parameters. The base values of the impedance, inductance, and capacitance are defined as in equations \ref{equation:eq34} \(\sim\) \ref{equation:eq36}.
+
 \begin{equation}
   Z_{b} = \ \frac{{E_{n}}^{2}}{P_{n}}
   \label{equation:eq34}
@@ -830,7 +835,7 @@ A simulation of method IV was done on MATLAB-Simulink to check the performance o
 \begin{figure}[h!]
   \centering
   \includegraphics[width=11cm]{image26.png}
-  \caption{The Output Voltage on The DC-Link on Simulink -- Method IV}
+  \caption{The output voltage on the DC-link -- method IV}
   \label{fig:image26}
 \end{figure}
 Also, we had to check the phase shift between voltage and current of one of the phases as shown in Figure \ref{fig:image27}:
@@ -838,10 +843,10 @@ Also, we had to check the phase shift between voltage and current of one of the 
 \begin{figure}[h!]
   \centering
   \includegraphics[width=11cm]{image27.png}
-  \caption{The Current and The Phase Voltage of Phase R -- Method IV}
+  \caption{The current and the phase voltage of phase R -- method IV}
   \label{fig:image27}
 \end{figure}
-Note that this is not the actual waveform of the current but a multiple of it. It was multiplied by fifty just so we can observe the two waveforms at the same time.
+Note that this is not the actual waveform of the current but a multiple of it. It was multiplied by fifty just so we can observe the two wave-forms at the same time.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -905,7 +910,7 @@ A simulation of method V was done on MATLAB-Simulink to check the performance of
 \begin{figure}[h!]
   \centering
   \includegraphics[width=11cm]{image28.png}
-  \caption{The Output Voltage on The DC-Link on Simulink -- Method V}
+  \caption{The output voltage on the DC-link  -- method V}
   \label{fig:image28}
 \end{figure}
 Also, we had to check the phase shift between voltage and current of one of the phases as shown in Figure \ref{fig:image29}:
@@ -913,10 +918,10 @@ Also, we had to check the phase shift between voltage and current of one of the 
 \begin{figure}[h!]
   \centering
   \includegraphics[width=11cm]{image29.png}
-  \caption{The Current and The Phase Voltage of Phase R -- Method V}
+  \caption{The current and the phase voltage of phase R -- method V}
   \label{fig:image29}
 \end{figure}
-Note that this is not the actual waveform of the current but a multiple of it. It was multiplied by fifty just so we can observe the two waveforms at the same time.
+Note that this is not the actual waveform of the current but a multiple of it. It was multiplied by fifty just so we can observe the two wave-forms at the same time.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -936,7 +941,7 @@ After discussing multiple methods, it is now time to compare the output of each 
    Method V & 46.7 & 28 & 1.1 \\[1ex] 
    \hline
   \end{tabular}
-  \caption{Comparison between The Output of Different Design Methods}
+  \caption{Comparison between the output of different design methods}
 \end{table}
 After learning all the different methods, each method shall be considered carefully to get the optimum output for the desired system. In our case, we have done multiple simulations to notice the output of each method. It was observed that each method produced the same output with slight differences. 
 
@@ -981,7 +986,7 @@ Therefore, the base impedance and the base capacitance are:
 \[Z_{b} = \ \frac{380^{2}}{10000} = 14.44\mathrm{\Omega}\]
 \[C_{b} = \ \frac{1}{2\pi*50*14.44} = 220\mu F\]
 The filter capacitance can be calculated by:
-\[C_{f} = \ 0.05*22*10^{- 6} = 11µF\]
+\[C_{f} = \ 0.05*22*10^{- 6} = 11\mu F\]
 To calculate the inverter-side inductor:
 \[I_{\max} = \ \frac{10000\sqrt{2}}{3*220} = 21.4A\]
 \[{\mathrm{\Delta}I}_{Lmax} = \ 0.1*21.4 = 2.14A\]
@@ -1083,12 +1088,12 @@ Therefore, the DC-link capacitance is equal to:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{The Inverter}
+\subsection{The Inverter Module}
 We have chosen an inverter module to begin with, to make the prototype of the main board of the AC/DC Rectification stage in our project.
 
 We need to build a charger that can reach 7K watt to reach 22K watt by cascading, so we begin to build a prototype with lower rating to confirm that our topology is working well before evaluating it in high power rating.
 
-Our prototype ratings are 1K watt with 200 V DC and 5 A at output, so we have chosen a 3-ph inverter ic\_IKCM30F60GDXKMA1, its rating is 600V, 35A. We can with this module get about 5K watt stable.
+Our prototype ratings are 1K watt with 200 V DC and 5 A at output, so we have chosen a 3-ph inverter ic\_IKCM30F60GDXKMA1, its rating is 600V, 35A.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1108,66 +1113,26 @@ Fully isolated Dual In-Line molded module
   \item	Lead-free terminal plating; RoHS compliant
   \item	Extremely low thermal resistance due to DCB
 \end{itemize}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{The Hardware Schematic}
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width = 17cm]{image30.png}
-  \caption{The Schematic of the Inverter Module}
-  \label{fig:image30}
-\end{figure}
-We bias the bootstrap with 15V using DC/DC transformer to make an isolation. Build the protection circuit from overcurrent and overheating. The Module can shutdown itself with the ITRIP pin that has a thermistor and send a signal (Volt Fault Out) to the microcontroller to alarm the fault.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{The PCB 3D Model}
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width = 12cm]{image31.png}
-  \caption{The PCB 3D Model of the Inverter Circuit}
-  \label{fig:image31}
-\end{figure}
+We bias the bootstrap with 15V using DC/DC transformer to make an isolation. Build the protection circuit from over-current and overheating. The Module can shutdown itself with the ITRIP pin that has a thermistor and send a signal (Volt Fault Out) to the micro-controller to alarm the fault.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{The Current Sensor}
 The core of our topology is the closed loop feedback, so the measurement must be as we could to be accurate. We have chosen CAS transducer, the latest version of the LTS series. The nominal current is 25A to help us with future product.
 
-The transducer has a multifunctional primary circuit that changes the nominal current lower to get more accuracy.
+The transducer has a multi-functional primary circuit that changes the nominal current lower to get more accuracy.
 \begin{table}[h!]
   \centering
   \includegraphics[width=14cm]{table2.png}
-  \caption{Recommended Connections for Different Sensitivities}
+  \caption{Recommended connections for different sensitivities}
 \end{table}
 \begin{figure}[h!]
   \centering
-  \includegraphics[width = 12cm]{image32.png}
-  \caption{$V_{out}$ VS $I_{p}$ Plot}
+  \includegraphics[width = 10cm]{image32.png}
+  \caption{$V_{out}$ versus $I_{p}$ plot}
   \label{fig:image32}
 \end{figure}
-In our Prototype we used the second technique that nominal current 12A.The most advantage is that the output signal does not need to rescale or biasing and ready to send to the microcontroller.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{The Hardware Schematic}
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width = 17cm]{image33.png}
-  \caption{The Schematic of the Current Sensor}
-  \label{fig:image33}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{The PCB 3D Model}
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width = 12cm]{image34.png}
-  \caption{The PCB 3D Model of the Current Sensor}
-  \label{fig:image34}
-\end{figure}
+In our Prototype we used the second technique that nominal current 12A.The most advantage is that the output signal does not need to re-scale or biasing and ready to send to the micro-controller.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1178,7 +1143,7 @@ We have chosen LV 25-P voltage transducer to get the voltage feedback
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{The Features}
 \begin{itemize}
-  \item Current equal to 10mA and Voltage ranging from 10v up to 500v
+  \item Current equal to 10mA and Voltage ranging from 10V up to 500V
   \item Excellent accuracy
   \item	Incredibly good linearity
   \item	Low thermal drift
@@ -1187,21 +1152,21 @@ We have chosen LV 25-P voltage transducer to get the voltage feedback
   \item	High immunity to external interference
   \item	Low disturbance in common mode.
 \end{itemize}
-This transducer needs an external circuit to rescale and biasing the output signal before the controller, so we used an Op-Amp circuit after simulating it and get the desired output.
+This transducer needs an external circuit to re-scale and biasing the output signal before the controller, so we used an op-amp circuit after simulating it and get the desired output.
 
 The transducer and the op-amp needed a positive and negative source power, so we used this topology to get the negative source.
 \begin{figure}[h!]
   \centering
   \includegraphics[width = 12cm]{image38.png}
-  \caption{The Schematic of the Supply for the Voltage Sensor}
+  \caption{The schematic of the supply for the voltage sensor}
   \label{fig:image38}
 \end{figure}
 
 The following figure shows the internal connection of the sensor:
 \begin{figure}[h!]
   \centering
-  \includegraphics[width = 12cm]{image35.png}
-  \caption{The Internal Connection of the Voltage Sensor}
+  \includegraphics[width = 10cm]{image35.png}
+  \caption{The internal connection of the voltage sensor}
   \label{fig:image35}
 \end{figure}
 
@@ -1210,11 +1175,12 @@ Primary Side (High Voltage):
   \item P1 and P2:  terminals Connected to the voltage to be measured.
   \item R1 (External Resistor): Sets the primary voltage range corresponding to primary current of 10 mA.
 \end{itemize}
+
 Secondary Side (Low Voltage):
 \begin{itemize}
   \item +Vc: Connect this terminal to a positive power supply (5 to 15 V DC).
   \item -Vc: Connect this terminal to the negative power supply.
-  \item	OUT: signal to the microcontroller
+  \item	OUT: signal to the micro-controller
   \item	Rm (Scaling Resistor): Sets the output voltage range and sensitivity.
 \end{itemize}
 The resistors values can be calculated using the following equations:
@@ -1224,30 +1190,31 @@ The resistors values can be calculated using the following equations:
 \end{equation}
 where
 \begin{itemize}
-  \item \(V_{out}\) is the desired output voltage. (designed for 3.3v)
+  \item \(V_{out}\) is the desired output voltage. (designed for 3.3V)
   \item \(I_{out}\) is the secondary circuit current.
 \end{itemize}
 \begin{equation}
   R_{1} = \ \frac{V_{in}}{I_{p}} = 50K\Omega
   \label{equation:eq45}
 \end{equation}
-where \(V_{in}\) is equal to 500v and \(I_{out}\) is 10mA.
+where \(V_{in}\) is equal to 500V and \(I_{p}\) is 10mA.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Interfacing with Microcontroller - Op-Amp Technique}
-In case of AC voltage measurements, dsp cannot receives negative voltage So we need to shift the signal out of the transducer to the positive and rescale it to get the desired output. Opamp adder circuit will preform this operation to convert .(-3.3v,3.3v) to (0v,3.3v).
+\subsubsection{Interfacing with Micro-controller - Op-Amp Technique}
+In case of AC voltage measurements, DSP can not receive negative voltage So we need to shift the signal out of the transducer to the positive and re-scale it to get the desired output. Op-amp adder circuit will preform this operation to convert .(-3.3V, 3.3V) to (0V, 3.3V).
 
 \emph{Procedures to Design the Op-Amp circuit}
+
 \begin{figure}[h!]
   \centering
-  \includegraphics[width = 12cm]{image36.png}
-  \caption{Op-Amp Circuit}
+  \includegraphics[width = 5cm]{image36.png}
+  \caption{Op-amp circuit}
   \label{fig:image36}
 \end{figure}
 where the first terminal represents the scale of input signal and the second terminal is the shift for scaled signal.
 
-For input signal from sensor ,the AC voltage is first scaled to half, then shifted above x axis by this scaled value to obtain its peak positive value (\(V_{in}\)) and 0v.
+For input signal from sensor ,the AC voltage is first scaled to half, then shifted above x axis by this scaled value to obtain its peak positive value (\(V_{in}\)) and 0V.
 \begin{equation}
   -V_{out}=\left(\frac{R_{f}}{R_{1}}\ast V_{in}\right)+\left(\frac{R_{f}}{R_{2}}\ast V2\right)
   \label{equation:eq46}
@@ -1255,8 +1222,8 @@ For input signal from sensor ,the AC voltage is first scaled to half, then shift
 for AC \(V_{in}\) = 3.3V
 \begin{figure}[h!]
   \centering
-  \includegraphics[width = 15cm]{image37.png}
-  \caption{The Circuit Diagram of the Op-Amp}
+  \includegraphics[width = 14cm]{image37.png}
+  \caption{The circuit diagram of the op-amp}
   \label{fig:image37}
 \end{figure}
 \begin{enumerate}
@@ -1268,83 +1235,145 @@ for AC \(V_{in}\) = 3.3V
 \begin{figure}[h!]
   \centering
   \includegraphics[width = 16cm]{image39.png}
-  \caption{The Schematic of the Op-Amp Circuit}
+  \caption{The schematic of the op-amp circuit}
   \label{fig:image39}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{The Hardware Schematic}
+\subsection{The Micro-controller}
+We have chosen to use DSP LaunchpadF28069M, because it is the easier controller to generate our model on it. We built a DSP interfacing with the inverter using optocoupler circuit to make the suitable isolation. For further references click here: \href{https://www.ti.com/lit/ug/sprui11b/sprui11b.pdf?ts=1706193932351}{datasheet}.
 \begin{figure}[h!]
   \centering
-  \includegraphics[width = 17cm]{image40.png}
-  \caption{The Schematic of the Voltage Sensor}
-  \label{fig:image40}
+  \includegraphics[width = 15cm]{image46.png}
+  \caption{DSP LaunchpadF28069M}
+  \label{fig:image46}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{The PCB 3D Model}
-\begin{figure}[h!]
+\section{Hardware Design}
+Our hardware design process involved developing five specialized PCBs—Inverter module, DC-link board, current sensors board, voltage sensors board for feedback, and a micro-controller interfacing board. Altium Designer, version 2024, played a pivotal role in this endeavor, chosen over alternatives like Eagle for specific reasons.
+
+Altium Designer's selection hinged on its robust feature set. Its advanced tools facilitated precise design implementation, crucial for our intricate requirements.
+
+Choosing Altium Designer over Eagle was a strategic decision based on its advanced features, multi-board design capabilities, documentation quality, community support, and scalability. This choice streamlined our PCB design for the inverter system efficiently.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{The Inverter Module}
+This board is considered the main board as it interfaces with the micro-controller and the DC-link board, also it interfaces to collect the feedback from the current and the voltage sensors boards. This board has indicating green LED to indicate the power connection, a red LED to indicate faults, several test points, IDC connecting cable to interface with the micro-controller and bootstrap circuits.
+\begin{figure}[ht]
   \centering
-  \includegraphics[width = 15cm]{image41.png}
-  \caption{The PCB 3D Model of the Voltage Sensor}
-  \label{fig:image41}
+  \includegraphics[width = 15cm]{image30.png}
+  \caption{The schematic of the inverter module board}
+  \label{fig:image30}
 \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{The Microcontroller}
-We have chosen to use DSP LaunchpadF28069M, because it is the easier controller to generate our model on it. We built a DSP interfacing with the inverter using optocoupler circuit to make the suitable isolation.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{The Hardware Schematic}
-\begin{figure}[h!]
+\begin{figure}[ht!]
   \centering
-  \includegraphics[width = 17cm]{image42.png}
-  \caption{The Schematic of the DSP Interfacing Board}
-  \label{fig:image42}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{The PCB 3D Model}
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width = 15cm]{image43.png}
-  \caption{The PCB 3D Model of the DSP Interfacing Board}
-  \label{fig:image43}
+  \subfloat[Inverter module PCB 3D design]
+  {\includegraphics[width=0.48\textwidth]{media/image31_a.png}\label{fig:image31_a}}
+  \hfill
+  \subfloat[Inverter module board - bottom layer]{\includegraphics[width=0.48\textwidth]{media/image31_b.png}\label{fig:image31_b}}
+  \caption{Inverter module hardware board design}
+  \label{fig:image31}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{DC-Link}
-According to our calculations that we have done in previous sections, we have designed a DC-Link to suit our project to literally link between the AC/DC Converion and the DC/DC Conversion boards.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+According to our calculations that we have done in previous sections, we have designed a DC-Link to suit our project to literally link between the AC/DC Conversion and the DC/DC Conversion boards.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{The Hardware Schematic}
-\begin{figure}[h!]
+\begin{figure}[ht]
   \centering
   \includegraphics[width = 17cm]{image44.png}
-  \caption{The Schematic of the DC-Link}
+  \caption{The schematic of the DC-link board}
   \label{fig:image44}
 \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{The PCB 3D Model}
-\begin{figure}[h!]
+\begin{figure}[ht!]
   \centering
-  \includegraphics[width = 15cm]{image45.png}
-  \caption{The PCB 3D Model of the DC-Link}
+  \subfloat[DC-link PCB 3D design]
+  {\includegraphics[width=0.8\textwidth]{media/image45_a.png}\label{fig:image45_a}}
+  
+  \subfloat[DC-link board - bottom layer]
+  {\includegraphics[width=0.8\textwidth]{media/image45_b.png}\label{fig:image45_b}}
+  \caption{DC-link hardware board design}
   \label{fig:image45}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Current Sensors}
+This board is designed for three current sensors. It also has LED indicator to indicate the power connection. It interfaces with the main board to provide current feedback.
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width = 15cm]{image33.png}
+  \caption{The schematic of the current sensors board}
+  \label{fig:image33}
+\end{figure}
+\begin{figure}[ht!]
+  \centering
+
+  \subfloat[Current sensors PCB 3D design]
+  {\includegraphics[width=0.47\textwidth]{media/image34_a.png}\label{fig:image34_a}}
+  \hfill
+  \subfloat[Current sensors board - bottom layer]{\includegraphics[width=0.47\textwidth]{media/image34_b.png}\label{fig:image34_b}}
+
+  \caption{Current sensors hardware board design}
+  \label{fig:image34}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Voltage Sensors}
+This board is designed for three voltage sensors, two of them will be used as a feedback of the input line voltage and the last one will be used as a feedback for the output DC voltage. It also has LED indicator to indicate the power connection.
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width = 16cm]{image40.png}
+  \caption{The schematic of the voltage sensors board}
+  \label{fig:image40}
+\end{figure}
+\begin{figure}[ht!]
+  \centering
+
+  \subfloat[Voltage sensors PCB 3D design]
+  {\includegraphics[width=0.47\textwidth]{media/image41_a.png}\label{fig:image41_a}}
+  \hfill
+  \subfloat[Voltage sensors board - bottom layer]{\includegraphics[width=0.47\textwidth]{media/image41_b.png}\label{fig:image41_b}}
+
+  \caption{Voltage sensors hardware board design}
+  \label{fig:image41}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Micro-controller Interfacing}
+This board acts as a shield for the DSP. It has several isolation optocouplers to protect the micro-controller from any fault.
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width = 15cm]{image42.png}
+  \caption{The schematic of the DSP interfacing board}
+  \label{fig:image42}
+\end{figure}
+\begin{figure}[ht!]
+  \centering
+
+  \subfloat[DSP interfacing PCB 3D design]
+  {\includegraphics[width=0.47\textwidth]{media/image43_a.png}\label{fig:image43_a}}
+  \hfill
+  \subfloat[DSP interfacing board - bottom layer]{\includegraphics[width=0.47\textwidth]{media/image43_b.png}\label{fig:image43_b}}
+
+  \caption{DSP interfacing hardware board design}
+  \label{fig:image43}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \addcontentsline{toc}{part}{Bibliography}
-\bibliographystyle{plain}
+\bibliographystyle{unsrt}
 \bibliography{references}
 
 \end{document}
