@@ -39,7 +39,7 @@ This project was a collaborative effort by a team of dedicated students. The tea
 ### DC/DC Conversion Subteam
 
 - Nouran Ahmed El-Sayed Ahmed Darwish
-- Ahmed Saeed Abdullatif Ebrahim Abo-Eita
+- Ahmed Saeed Abdullatif Ebrahim Aboeita
 - Mohamed Raafat Abdelgaber Ragab
 - Ahmed Mostafa Kamel El-Tahan
 - Mennat Allah Khaled Ali Barakat
