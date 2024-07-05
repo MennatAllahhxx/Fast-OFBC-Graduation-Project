@@ -32,7 +32,7 @@ This project was a collaborative effort by a team of dedicated students. The tea
 - Hassan Tarek Ali Hassan
 - Mahmoud Yosry Mostafa Moussa
 - Muhammad Ibrahim Gaber Ibrahim 
-- Mennat Allah Hassan Ali 
+- Mennat Allah Hassan Ali [GitHub](https://github.com/MennatAllahhxx) | [LinkedIn](https://www.linkedin.com/in/mennatallahhxx/)
 - Yousef Mohamed Zaghlol Elsenosy Balbaa
 - Alaa Ashraf Mohamed Abdelhalim
 
