@@ -29,21 +29,21 @@ This project was a collaborative effort by a team of dedicated students. The tea
 
 ### AC/DC Conversion Subteam
 
-- Member 1
-- Member 2
-- Member 3
-- Member 4
-- Member 5
-- Member 6
+- Hassan Tarek Ali Hassan
+- Mahmoud Yosry Mostafa Moussa
+- Muhammad Ibrahim Gaber Ibrahim 
+- Mennat Allah Hassan Ali 
+- Yousef Mohamed Zaghlol Elsenosy Balbaa
+- Alaa Ashraf Mohamed Abdelhalim
 
 ### DC/DC Conversion Subteam
 
-- Member 7
-- Member 8
-- Member 9
-- Member 10
-- Member 11
-- Member 12
+- Nouran Ahmed El-Sayed Ahmed Darwish
+- Ahmed Saeed Abdullatif Ebrahim Abo-Eita
+- Mohamed Raafat Abdelgaber Ragab
+- Ahmed Mostafa Kamel El-Tahan
+- Mennat Allah Khaled Ali Barakat
+- Moamen Mohamed Eltayeb
 
 ## How to Use This Repository
 
@@ -65,4 +65,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For any inquiries or further information, please contact [your email].
+For any inquiries or further information, please contact hassan.t.ali1998@gmail.com
