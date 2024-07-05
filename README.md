@@ -29,7 +29,7 @@ This project was a collaborative effort by a team of dedicated students. The tea
 
 ### AC/DC Conversion Subteam
 
-- Hassan Tarek Ali Hassan
+- Hassan Tarek Ali Hassan [GitHub](https://github.com/HassanTarek98) | [LinkedIn](https://www.linkedin.com/in/hassan-tarek-5ba638256/)
 - Mahmoud Yosry Mostafa Moussa
 - Muhammad Ibrahim Gaber Ibrahim 
 - Mennat Allah Hassan Ali [GitHub](https://github.com/MennatAllahhxx) | [LinkedIn](https://www.linkedin.com/in/mennatallahhxx/)
