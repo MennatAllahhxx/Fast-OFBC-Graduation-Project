@@ -9,7 +9,7 @@ Welcome to the Fast Off-board Charger for Electric Vehicles project! This projec
 The repository is organized into the following directories:
 
 - [**AC-DC_Conversion**](./AC-DC_Conversion): Contains all the files and scripts related to the AC to DC conversion process.
-- [**DC-DC_Conversion**](./DC-DC_conversion): Includes the components and models for the DC to DC conversion phase.
+- [**DC-DC_Conversion**](./DC-DC_Conversion): Includes the components and models for the DC to DC conversion phase.
 - [**Charger_Integration**](./Charger_Integration): Integrates all the components of the charger system.
 - [**Documentation**](./Documentation): Comprehensive documentation of the project, including the graduation project book and the presentation of the project discussion.
 - [**media**](./media): Contains all the media files, including images and diagrams used in the README and documentation.
