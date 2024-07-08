@@ -28,14 +28,3 @@ This subdirectory focuses on the synchronous buck converter, a type of non-isola
 
 To get started with the contents of this directory, navigate to the subdirectory of interest and explore the provided resources. Each subdirectory includes detailed documentation and relevant files to help you understand and implement the converters.
 
-## Contributing
-
-If you would like to contribute to this project, please follow the guidelines outlined in the main repository's README file. Contributions are welcome and appreciated!
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-Feel free to adjust the content according to your specific project details and requirements!
