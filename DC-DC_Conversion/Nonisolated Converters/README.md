@@ -41,14 +41,3 @@ To run these models on MATLAB Simulink using the DSP F28069M LaunchPad™, follo
 - **Synchronous Buck Converter**: An advanced buck converter that uses synchronous rectification for improved efficiency.
 - **Synchronous Buck Converter using 3-phase Inverter**: Utilizes a 3-phase inverter for the synchronous buck conversion process, offering enhanced performance for specific applications.
 
-## Contributing
-
-If you would like to contribute to this project, please follow the guidelines outlined in the main repository's README file. Contributions are welcome and appreciated!
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-Feel free to adjust the content to better fit your project’s specifics and requirements!
