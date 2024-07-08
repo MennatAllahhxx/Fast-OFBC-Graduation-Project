@@ -42,14 +42,3 @@ To run these models on MATLAB Simulink using the DSP F28069M LaunchPad™, follo
 - **LLC Resonant Converter**: Provides high efficiency and is used for applications requiring low EMI.
 - **Series Resonant Converter with Transformer**: Combines the benefits of resonance and isolation for various applications.
 
-## Contributing
-
-If you would like to contribute to this project, please follow the guidelines outlined in the main repository's README file. Contributions are welcome and appreciated!
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-Feel free to modify and enhance the content as needed to better fit your project’s specifics!
