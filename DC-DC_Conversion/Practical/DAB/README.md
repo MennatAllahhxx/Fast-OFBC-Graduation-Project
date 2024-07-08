@@ -35,14 +35,3 @@ To run this model on MATLAB Simulink using the DSP F28069M LaunchPad™, follow 
 
 The Dual Active Bridge (DAB) converter is a type of isolated DC-DC converter that uses two active full bridges. It is known for its bidirectional power flow capability and efficiency, making it suitable for applications like battery charging and renewable energy systems.
 
-## Contributing
-
-If you would like to contribute to this project, please follow the guidelines outlined in the main repository's README file. Contributions are welcome and appreciated!
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-Feel free to modify and enhance the content as needed to better fit your project’s specifics!
