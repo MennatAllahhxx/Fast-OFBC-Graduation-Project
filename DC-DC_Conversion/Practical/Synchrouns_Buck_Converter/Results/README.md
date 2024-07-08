@@ -41,14 +41,3 @@ To run the Synchronous Buck Converter model on MATLAB Simulink using an Arduino 
 
 The images in this directory provide insight into the practical performance of the Synchronous Buck Converter. Use these results to verify and analyze the effectiveness of your converter design.
 
-## Contributing
-
-If you would like to contribute to this project, please follow the guidelines outlined in the main repository's README file. Contributions are welcome and appreciated!
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-Feel free to adjust the content to better fit your project’s specifics and requirements!
